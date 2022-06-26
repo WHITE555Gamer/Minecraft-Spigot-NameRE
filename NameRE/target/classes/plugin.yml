@@ -1,5 +1,5 @@
 name: NameRE
-version: '0.0.1-SNAPSHOT'
+version: '0.0.1-ALPHA'
 main: com.github.white555gamer.namere.NameRE
 api-version: 1.19
 authors: [ WHITE555Gamer ]

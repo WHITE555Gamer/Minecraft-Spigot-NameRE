@@ -3,7 +3,12 @@ package com.github.white555gamer.namere.assets;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 import static com.github.white555gamer.namere.assets.ErrorMsg.*;
 import static com.github.white555gamer.namere.assets.NameRE_assets.NameE.edit_all.EditAll;
@@ -17,7 +22,7 @@ import static com.github.white555gamer.namere.assets.NameRE_assets.NameR.reset_l
 import static com.github.white555gamer.namere.assets.NameRE_assets.version.VersionMessage;
 import static org.bukkit.Bukkit.*;
 
-public class Commands_NameRE implements CommandExecutor {
+public class Commands_NameRE implements CommandExecutor, TabCompleter {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
@@ -59,5 +64,42 @@ public class Commands_NameRE implements CommandExecutor {
             getLogger().info(sender.getName() + " issued NameRE Command:\n" + label);
             return true;
         }
+    }
+
+    @Override
+    public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
+
+        if (command.getName().equalsIgnoreCase("NameRE")) {
+            if (args.length == 1) {
+                if (args[0].length() == 0) {
+                    return Arrays.asList("edit-all","edit-custom","edit-display","edit-list","reset-all","reset-custom","reset-display","reset-list");
+                } else {
+                    if ("edit-".startsWith(args[0])) {
+                        return Arrays.asList("edit-all","edit-custom","edit-display","edit-list");
+                    } else if ("edit-all".startsWith(args[0])) {
+                        return Collections.singletonList("edit-all");
+                    } else if ("edit-custom".startsWith(args[0])) {
+                        return Collections.singletonList("edit-custom");
+                    } else if ("edit-display".startsWith(args[0])) {
+                        return Collections.singletonList("edit-display");
+                    } else if ("edit-list".startsWith(args[0])) {
+                        return Collections.singletonList("edit-list");
+                    } else if ("reset-".startsWith(args[0])) {
+                        return Arrays.asList("reset-all","reset-custom","reset-display","reset-list");
+                    } else if ("reset-all".startsWith(args[0])) {
+                        return Collections.singletonList("reset-all");
+                    } else if ("reset-custom".startsWith(args[0])) {
+                        return Collections.singletonList("reset-custom");
+                    } else if ("reset-display".startsWith(args[0])) {
+                        return Collections.singletonList("reset-display");
+                    } else if ("reset-list".startsWith(args[0])) {
+                        return Collections.singletonList("reset-list");
+                    } else if ("version".startsWith(args[0])) {
+                        return Collections.singletonList("version");
+                    }
+                }
+            }
+        }
+        return null;
     }
 }

@@ -6,7 +6,7 @@
 
     <groupId>com.github.WHITE555Gamer</groupId>
     <artifactId>NameRE</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1-ALPHA</version>
     <packaging>jar</packaging>
 
     <name>NameRE</name>
