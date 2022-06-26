@@ -29,3 +29,5 @@ List of current functions
 /NameRE reset-custom <PlayerName>  
 /NameRE reset-display <PlayerName>  
 /NameRE reset-list <PlayerName>
+
+You can download this plugin jar file in: https://www.curseforge.com/minecraft/bukkit-plugins/namere
