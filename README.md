@@ -1,6 +1,6 @@
 # Minecraft-NameRE
 Short Description: 
-Minecraft's mini-plugin for easier name edit or redirect.
+Minecraft's mini-plugin for easier name edit or reset.
 
 Long Description: 
 
@@ -8,7 +8,7 @@ NameRE
 
 Note: Some descriptions using DeepL Translate.
 
-NameRE is mini-plugin for  easier name edit or redirect in spigot multi-server plugin.
+NameRE is mini-plugin for  easier name edit or reset in spigot multi-server plugin.
 
 It is recommended to use a stable plugin.
 However, this plugin does not make big changes to Minecraft.
